@@ -1,0 +1,15 @@
+General,Temperatura,Humedad,Viento,Jugar
+asoleado,caliente,alta,no,N
+asoleado,caliente,alta,si,N
+nublado,caliente,alta,no,P
+lluvioso,templada,alta,no,P
+lluvioso,fria,normal,no,P
+lluvioso,fria,normal,si,N
+nublado,fria,normal,si,P
+asoleado,templada,alta,no,N
+asoleado,fria,normal,no,P
+lluvioso,templada,normal,no,P
+asoleado,templada,normal,si,P
+nublado,templada,alta,si,P
+nublado,caliente,normal,no,P
+lluvioso,templada,alta,si,N

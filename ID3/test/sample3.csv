@@ -1,0 +1,15 @@
+Presion Arterial,Urea en Sangre,Gota,Hipotiroidismo,Administrar Tratamiento
+Alta,Alta,Si,No,No
+Alta,Alta,Si,Si,No
+Normal,Alta,Si,No,Si
+Baja,Normal,Si,No,Si
+Baja,Baja,No,No,Si
+Baja,Baja,No,Si,No
+Normal,Baja,No,Si,Si
+Alta,Normal,Si,No,No
+Alta,Baja,No,No,Si
+Baja,Normal,No,No,Si
+Alta,Normal,No,Si,Si
+Normal,Normal,Si,Si,Si
+Normal,Alta,No,No,Si
+Baja,Normal,Si,Si,No
