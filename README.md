@@ -1,7 +1,7 @@
 # Data Mining
 > This repository contains the contents viewed in the data mining course 2018-1 ESCOM IPN
 
-[An Introduction to Machine Learning With Decision Trees](https://ramandeep2017.files.wordpress.com/2017/08/02705-1cjv-yipk8pejnitg2vxava.png?w=640)]()
+[![An Introduction to Machine Learning With Decision Trees](https://ramandeep2017.files.wordpress.com/2017/08/02705-1cjv-yipk8pejnitg2vxava.png?w=640)]()
 
 
 
