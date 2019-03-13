@@ -33,5 +33,9 @@ The project codebase is contained within the folder "spotify-application", the c
 
 ### Project Screenshots and Demo
 
-####Demonstration of how internally ID3 algorithm operates
-![ID3 Algorithm GIF](https://annalyzin.files.wordpress.com/2016/07/decision-tree-tutorial-animated3.gif?w=636&h=312&crop=1)
+#### Demonstration of how internally ID3 algorithm operates
+
+<p align="center">
+  <img src="https://annalyzin.files.wordpress.com/2016/07/decision-tree-tutorial-animated3.gif?w=636&h=312&crop=1" alt="ID3 Algorithm GIF"/>
+</p>
+
