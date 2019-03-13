@@ -26,7 +26,7 @@ Simply put, a decision tree is a tree with each branch represents a choice betwe
 A decision tree is a type of supervised learning algorithm (with a predefined target variable) that is mostly used in classification problems and works for both categorical and continuous input and output variables. It is one of the most widely used and practical methods for inductive inference. (Inductive inference is the process of reaching a general conclusion from specific examples.)
 
 #### What this Project Covers?
-As the main project of the course the algorithm is applied to data stored in a database of a music streaming application named (Stopify). This with the purpose of obtaining a better visualization of the overall information structure and to generate very basic business knowledge for decision taking by mining and processing the raw data.
+As the main project of the course, this algorithm is applied to data stored in a database of a music streaming application named (Stopify). This with the purpose of obtaining a better visualization of the overall information structure and to generate very basic business knowledge for decision taking by mining and processing the raw data.
 
 ### Project Codebase
 The project codebase is contained within the folder "stopify-application", the codebase include both backend and frontend development, for more information please feel free to take a look at it!.
