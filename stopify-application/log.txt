@@ -1,0 +1,2291 @@
+Getting Connection to database...
+
+==============================================================
+QUERY: 
+
+SELECT genre.name ,  artist.idregion ,  user.birthday ,  song.year ,  song.hit 
+FROM user, playlist_has_followers, playlist, playlist_has_songs, song, genre, region, artist
+WHERE region.idregion = user.idregion
+AND user.email = playlist_has_followers.email
+AND playlist_has_followers.idplaylist = playlist.idplaylist
+AND playlist.idplaylist = playlist_has_songs.idplaylist
+AND playlist_has_songs.idsong = song.idsong
+AND song.idgenre = genre.idgenre
+AND song.idartist = artist.idartist
+LIMIT 5000;
+==============================================================
+KEYSET
+  genre.name:     Pop    Rock    Jazz    Electronic    Funk / Soul    Hip Hop  
+  artist.idregion:     American    European  
+  user.birthday:     X Generation    Z Generation    Millenium  
+  song.year:     90's    00's    70's    80's    60's  
+  song.hit:     Y    N  
+==============================================================
+ARRAYSET
+  genre.name
+  artist.idregion
+  user.birthday
+  song.year
+  song.hit
+==============================================================
+AGREGANDO CLASE Y ATRIBUTOS
+  song.hit:   ***Clase Agregado***
+  genre.name:   ***Atributo Agregado***
+  artist.idregion:   ***Atributo Agregado***
+  user.birthday:   ***Atributo Agregado***
+  song.year:   ***Atributo Agregado***
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: Y  Frecuencia: 1072
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: N  Frecuencia: 804
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 1541
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 1583
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 858
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 787
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 819
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 750
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 936
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 850
+Atributo: song.year  Valor de Atributo: 90's Valor de Clase: Y  Frecuencia: 402
+Atributo: song.year  Valor de Atributo: 90's Valor de Clase: N  Frecuencia: 603
+Atributo: song.year  Valor de Atributo: 00's Valor de Clase: Y  Frecuencia: 201
+Atributo: song.year  Valor de Atributo: 00's Valor de Clase: N  Frecuencia: 109
+Atributo: song.year  Valor de Atributo: 70's Valor de Clase: Y  Frecuencia: 871
+Atributo: song.year  Valor de Atributo: 70's Valor de Clase: N  Frecuencia: 871
+Atributo: song.year  Valor de Atributo: 80's Valor de Clase: Y  Frecuencia: 603
+Atributo: song.year  Valor de Atributo: 80's Valor de Clase: N  Frecuencia: 536
+Atributo: song.year  Valor de Atributo: 60's Valor de Clase: Y  Frecuencia: 536
+Atributo: song.year  Valor de Atributo: 60's Valor de Clase: N  Frecuencia: 268
+Atributo: genre.name  Valor de Atributo: Pop Valor de Clase: Y  Frecuencia: 536
+Atributo: genre.name  Valor de Atributo: Pop Valor de Clase: N  Frecuencia: 201
+Atributo: genre.name  Valor de Atributo: Rock Valor de Clase: Y  Frecuencia: 1139
+Atributo: genre.name  Valor de Atributo: Rock Valor de Clase: N  Frecuencia: 1072
+Atributo: genre.name  Valor de Atributo: Jazz Valor de Clase: Y  Frecuencia: 67
+Atributo: genre.name  Valor de Atributo: Jazz Valor de Clase: N  Frecuencia: 0
+Atributo: genre.name  Valor de Atributo: Electronic Valor de Clase: Y  Frecuencia: 201
+Atributo: genre.name  Valor de Atributo: Electronic Valor de Clase: N  Frecuencia: 335
+Atributo: genre.name  Valor de Atributo: Funk / Soul Valor de Clase: Y  Frecuencia: 402
+Atributo: genre.name  Valor de Atributo: Funk / Soul Valor de Clase: N  Frecuencia: 377
+Atributo: genre.name  Valor de Atributo: Hip Hop Valor de Clase: Y  Frecuencia: 268
+Atributo: genre.name  Valor de Atributo: Hip Hop Valor de Clase: N  Frecuencia: 402
+==============================================================
+
+***Calculando la Entropia Binaria para cada atributo***
+Clase valor: Y
+Clase valor: N
+Valor de p: 10452.0
+Valor de n: 9548.0
+*****************************
+Nombre valor: American
+Frecuencia de p: 1072
+Frecuencia de n: 804
+Valor de logp: 0.5714285714285714
+Valor de logn: 0.42857142857142855
+Entropia valor: 0.9852281360342516
+
+Nombre valor: European
+Frecuencia de p: 1541
+Frecuencia de n: 1583
+Valor de logp: 0.4932778489116517
+Valor de logn: 0.5067221510883483
+Entropia valor: 0.9998696130406854
+
+Entropia Atributo: 0.9943761308678715
+Frecuencia Atributo: 5000.0
+Ganancia calculada: 0.004149625064495122
+Ganancia obtenida: 0.004149625064495122
+Ganancia obtenida: 0.004149625064495122
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 858
+Frecuencia de n: 787
+Valor de logp: 0.521580547112462
+Valor de logn: 0.478419452887538
+Entropia valor: 0.9986557985624203
+
+Nombre valor: Z Generation
+Frecuencia de p: 819
+Frecuencia de n: 750
+Valor de logp: 0.5219885277246654
+Valor de logn: 0.4780114722753346
+Entropia valor: 0.9986044772858679
+
+Nombre valor: Millenium
+Frecuencia de p: 936
+Frecuencia de n: 850
+Valor de logp: 0.5240761478163494
+Valor de logn: 0.47592385218365063
+Entropia valor: 0.9983268052660319
+
+Entropia Atributo: 0.9985221775403683
+Frecuencia Atributo: 5000.0
+Ganancia calculada: 3.5783919982712575E-6
+Ganancia obtenida: 3.5783919982712575E-6
+*****************************
+Nombre valor: 90's
+Frecuencia de p: 402
+Frecuencia de n: 603
+Valor de logp: 0.4
+Valor de logn: 0.6
+Entropia valor: 0.9709505944546686
+
+Nombre valor: 00's
+Frecuencia de p: 201
+Frecuencia de n: 109
+Valor de logp: 0.6483870967741936
+Valor de logn: 0.35161290322580646
+Entropia valor: 0.9355002719592389
+
+Nombre valor: 70's
+Frecuencia de p: 871
+Frecuencia de n: 871
+Valor de logp: 0.5
+Valor de logn: 0.5
+Entropia valor: 1.0
+
+Nombre valor: 80's
+Frecuencia de p: 603
+Frecuencia de n: 536
+Valor de logp: 0.5294117647058824
+Valor de logn: 0.47058823529411764
+Entropia valor: 0.9975025463691153
+
+Nombre valor: 60's
+Frecuencia de p: 536
+Frecuencia de n: 268
+Valor de logp: 0.6666666666666666
+Valor de logn: 0.3333333333333333
+Entropia valor: 0.9182958340544896
+
+Entropia Atributo: 0.9764551365257075
+Frecuencia Atributo: 5000.0
+Ganancia calculada: 0.02207061940665911
+Ganancia obtenida: 0.02207061940665911
+Ganancia obtenida: 0.02207061940665911
+*****************************
+Nombre valor: Pop
+Frecuencia de p: 536
+Frecuencia de n: 201
+Valor de logp: 0.7272727272727273
+Valor de logn: 0.2727272727272727
+Entropia valor: 0.8453509366224365
+
+Nombre valor: Rock
+Frecuencia de p: 1139
+Frecuencia de n: 1072
+Valor de logp: 0.5151515151515151
+Valor de logn: 0.48484848484848486
+Entropia valor: 0.9993375041688847
+
+Nombre valor: Jazz
+Frecuencia de p: 67
+Frecuencia de n: 0
+Valor de logp: 1.0
+Valor de logn: 0.0
+Entropia valor: 0.0
+
+Nombre valor: Electronic
+Frecuencia de p: 201
+Frecuencia de n: 335
+Valor de logp: 0.375
+Valor de logn: 0.625
+Entropia valor: 0.9544340029249649
+
+Nombre valor: Funk / Soul
+Frecuencia de p: 402
+Frecuencia de n: 377
+Valor de logp: 0.5160462130937099
+Valor de logn: 0.4839537869062901
+Entropia valor: 0.999256939427246
+
+Nombre valor: Hip Hop
+Frecuencia de p: 268
+Frecuencia de n: 402
+Valor de logp: 0.4
+Valor de logn: 0.6
+Entropia valor: 0.9709505944546686
+
+Entropia Atributo: 0.9546187083348746
+Frecuencia Atributo: 5000.0
+Ganancia calculada: 0.04390704759749198
+Ganancia obtenida: 0.04390704759749198
+Ganancia obtenida: 0.04390704759749198
+
+El atributo con maxima ganancia es: genre.name Ganancia: 0.04390704759749198
+
+==========================================================
+Valor atributo seleccionado: Pop
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+(Mapa) Nombre Atributo: user.birthday
+(Mapa) Nombre Atributo: song.year
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: Y  Frecuencia: 2144
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: N  Frecuencia: 804
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 704
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 264
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 672
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 252
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 768
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 288
+Atributo: song.year  Valor de Atributo: 80's Valor de Clase: Y  Frecuencia: 2144
+Atributo: song.year  Valor de Atributo: 80's Valor de Clase: N  Frecuencia: 804
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 2144.0
+Valor de n: 804.0
+Información: 0.8453509366224365
+*****************************
+Nombre valor: American
+Frecuencia de p: 2144
+Frecuencia de n: 804
+Valor de logp: 0.7272727272727273
+Valor de logn: 0.2727272727272727
+Entropia valor: 0.8453509366224365
+
+Entropia Atributo: 0.8453509366224367
+Frecuencia Atributo: 2948.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 704
+Frecuencia de n: 264
+Valor de logp: 0.7272727272727273
+Valor de logn: 0.2727272727272727
+Entropia valor: 0.8453509366224365
+
+Nombre valor: Z Generation
+Frecuencia de p: 672
+Frecuencia de n: 252
+Valor de logp: 0.7272727272727273
+Valor de logn: 0.2727272727272727
+Entropia valor: 0.8453509366224365
+
+Nombre valor: Millenium
+Frecuencia de p: 768
+Frecuencia de n: 288
+Valor de logp: 0.7272727272727273
+Valor de logn: 0.2727272727272727
+Entropia valor: 0.8453509366224365
+
+Entropia Atributo: 0.8453509366224367
+Frecuencia Atributo: 2948.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+*****************************
+Nombre valor: 80's
+Frecuencia de p: 2144
+Frecuencia de n: 804
+Valor de logp: 0.7272727272727273
+Valor de logn: 0.2727272727272727
+Entropia valor: 0.8453509366224365
+
+Entropia Atributo: 0.8453509366224367
+Frecuencia Atributo: 2948.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: song.year Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: 80's
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+(Mapa) Nombre Atributo: user.birthday
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: Y  Frecuencia: 2144
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: N  Frecuencia: 804
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 704
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 264
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 672
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 252
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 768
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 288
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 2144.0
+Valor de n: 804.0
+Información: 0.8453509366224365
+*****************************
+Nombre valor: American
+Frecuencia de p: 2144
+Frecuencia de n: 804
+Valor de logp: 0.7272727272727273
+Valor de logn: 0.2727272727272727
+Entropia valor: 0.8453509366224365
+
+Entropia Atributo: 0.8453509366224367
+Frecuencia Atributo: 2948.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 704
+Frecuencia de n: 264
+Valor de logp: 0.7272727272727273
+Valor de logn: 0.2727272727272727
+Entropia valor: 0.8453509366224365
+
+Nombre valor: Z Generation
+Frecuencia de p: 672
+Frecuencia de n: 252
+Valor de logp: 0.7272727272727273
+Valor de logn: 0.2727272727272727
+Entropia valor: 0.8453509366224365
+
+Nombre valor: Millenium
+Frecuencia de p: 768
+Frecuencia de n: 288
+Valor de logp: 0.7272727272727273
+Valor de logn: 0.2727272727272727
+Entropia valor: 0.8453509366224365
+
+Entropia Atributo: 0.8453509366224367
+Frecuencia Atributo: 2948.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: user.birthday Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: X Generation
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: Y  Frecuencia: 704
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: N  Frecuencia: 264
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 704.0
+Valor de n: 264.0
+Información: 0.8453509366224365
+*****************************
+Nombre valor: American
+Frecuencia de p: 704
+Frecuencia de n: 264
+Valor de logp: 0.7272727272727273
+Valor de logn: 0.2727272727272727
+Entropia valor: 0.8453509366224365
+
+Entropia Atributo: 0.8453509366224365
+Frecuencia Atributo: 968.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: American
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Z Generation
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: Y  Frecuencia: 672
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: N  Frecuencia: 252
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 672.0
+Valor de n: 252.0
+Información: 0.8453509366224365
+*****************************
+Nombre valor: American
+Frecuencia de p: 672
+Frecuencia de n: 252
+Valor de logp: 0.7272727272727273
+Valor de logn: 0.2727272727272727
+Entropia valor: 0.8453509366224365
+
+Entropia Atributo: 0.8453509366224365
+Frecuencia Atributo: 924.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: American
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Millenium
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: Y  Frecuencia: 768
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: N  Frecuencia: 288
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 768.0
+Valor de n: 288.0
+Información: 0.8453509366224365
+*****************************
+Nombre valor: American
+Frecuencia de p: 768
+Frecuencia de n: 288
+Valor de logp: 0.7272727272727273
+Valor de logn: 0.2727272727272727
+Entropia valor: 0.8453509366224365
+
+Entropia Atributo: 0.8453509366224365
+Frecuencia Atributo: 1056.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: American
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Rock
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+(Mapa) Nombre Atributo: user.birthday
+(Mapa) Nombre Atributo: song.year
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: Y  Frecuencia: 804
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: N  Frecuencia: 268
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 3752
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 4020
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 1496
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 1408
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 1428
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 1344
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 1632
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 1536
+Atributo: song.year  Valor de Atributo: 90's Valor de Clase: Y  Frecuencia: 536
+Atributo: song.year  Valor de Atributo: 90's Valor de Clase: N  Frecuencia: 536
+Atributo: song.year  Valor de Atributo: 70's Valor de Clase: Y  Frecuencia: 1876
+Atributo: song.year  Valor de Atributo: 70's Valor de Clase: N  Frecuencia: 1608
+Atributo: song.year  Valor de Atributo: 80's Valor de Clase: Y  Frecuencia: 268
+Atributo: song.year  Valor de Atributo: 80's Valor de Clase: N  Frecuencia: 1072
+Atributo: song.year  Valor de Atributo: 60's Valor de Clase: Y  Frecuencia: 1876
+Atributo: song.year  Valor de Atributo: 60's Valor de Clase: N  Frecuencia: 1072
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 4556.0
+Valor de n: 4288.0
+Información: 0.9993375041688847
+*****************************
+Nombre valor: American
+Frecuencia de p: 804
+Frecuencia de n: 268
+Valor de logp: 0.75
+Valor de logn: 0.25
+Entropia valor: 0.8112781244591328
+
+Nombre valor: European
+Frecuencia de p: 3752
+Frecuencia de n: 4020
+Valor de logp: 0.4827586206896552
+Valor de logn: 0.5172413793103449
+Entropia valor: 0.9991421039919088
+
+Entropia Atributo: 0.9763707125333905
+Frecuencia Atributo: 8844.0
+Ganancia calculada: 0.0229667916354942
+Ganancia obtenida: 0.0229667916354942
+Ganancia obtenida: 0.0229667916354942
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 1496
+Frecuencia de n: 1408
+Valor de logp: 0.5151515151515151
+Valor de logn: 0.48484848484848486
+Entropia valor: 0.9993375041688847
+
+Nombre valor: Z Generation
+Frecuencia de p: 1428
+Frecuencia de n: 1344
+Valor de logp: 0.5151515151515151
+Valor de logn: 0.48484848484848486
+Entropia valor: 0.9993375041688847
+
+Nombre valor: Millenium
+Frecuencia de p: 1632
+Frecuencia de n: 1536
+Valor de logp: 0.5151515151515151
+Valor de logn: 0.48484848484848486
+Entropia valor: 0.9993375041688847
+
+Entropia Atributo: 0.9993375041688847
+Frecuencia Atributo: 8844.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+*****************************
+Nombre valor: 90's
+Frecuencia de p: 536
+Frecuencia de n: 536
+Valor de logp: 0.5
+Valor de logn: 0.5
+Entropia valor: 1.0
+
+Nombre valor: 70's
+Frecuencia de p: 1876
+Frecuencia de n: 1608
+Valor de logp: 0.5384615384615384
+Valor de logn: 0.46153846153846156
+Entropia valor: 0.9957274520849256
+
+Nombre valor: 80's
+Frecuencia de p: 268
+Frecuencia de n: 1072
+Valor de logp: 0.2
+Valor de logn: 0.8
+Entropia valor: 0.7219280948873623
+
+Nombre valor: 60's
+Frecuencia de p: 1876
+Frecuencia de n: 1072
+Valor de logp: 0.6363636363636364
+Valor de logn: 0.36363636363636365
+Entropia valor: 0.9456603046006402
+
+Entropia Atributo: 0.938071536428724
+Frecuencia Atributo: 8844.0
+Ganancia calculada: 0.06126596774016069
+Ganancia obtenida: 0.06126596774016069
+Ganancia obtenida: 0.06126596774016069
+
+El atributo con maxima ganancia es: song.year Ganancia: 0.06126596774016069
+
+==========================================================
+Valor atributo seleccionado: 90's
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+(Mapa) Nombre Atributo: user.birthday
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 536
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 536
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 176
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 176
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 168
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 168
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 192
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 192
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 536.0
+Valor de n: 536.0
+Información: 1.0
+*****************************
+Nombre valor: European
+Frecuencia de p: 536
+Frecuencia de n: 536
+Valor de logp: 0.5
+Valor de logn: 0.5
+Entropia valor: 1.0
+
+Entropia Atributo: 1.0
+Frecuencia Atributo: 1072.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 176
+Frecuencia de n: 176
+Valor de logp: 0.5
+Valor de logn: 0.5
+Entropia valor: 1.0
+
+Nombre valor: Z Generation
+Frecuencia de p: 168
+Frecuencia de n: 168
+Valor de logp: 0.5
+Valor de logn: 0.5
+Entropia valor: 1.0
+
+Nombre valor: Millenium
+Frecuencia de p: 192
+Frecuencia de n: 192
+Valor de logp: 0.5
+Valor de logn: 0.5
+Entropia valor: 1.0
+
+Entropia Atributo: 1.0
+Frecuencia Atributo: 1072.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: user.birthday Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: X Generation
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 176
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 176
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 176.0
+Valor de n: 176.0
+Información: 1.0
+*****************************
+Nombre valor: European
+Frecuencia de p: 176
+Frecuencia de n: 176
+Valor de logp: 0.5
+Valor de logn: 0.5
+Entropia valor: 1.0
+
+Entropia Atributo: 1.0
+Frecuencia Atributo: 352.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: European
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Z Generation
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 168
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 168
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 168.0
+Valor de n: 168.0
+Información: 1.0
+*****************************
+Nombre valor: European
+Frecuencia de p: 168
+Frecuencia de n: 168
+Valor de logp: 0.5
+Valor de logn: 0.5
+Entropia valor: 1.0
+
+Entropia Atributo: 1.0
+Frecuencia Atributo: 336.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: European
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Millenium
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 192
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 192
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 192.0
+Valor de n: 192.0
+Información: 1.0
+*****************************
+Nombre valor: European
+Frecuencia de p: 192
+Frecuencia de n: 192
+Valor de logp: 0.5
+Valor de logn: 0.5
+Entropia valor: 1.0
+
+Entropia Atributo: 1.0
+Frecuencia Atributo: 384.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: European
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: 70's
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+(Mapa) Nombre Atributo: user.birthday
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 1876
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 1608
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 616
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 528
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 588
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 504
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 672
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 576
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 1876.0
+Valor de n: 1608.0
+Información: 0.9957274520849256
+*****************************
+Nombre valor: European
+Frecuencia de p: 1876
+Frecuencia de n: 1608
+Valor de logp: 0.5384615384615384
+Valor de logn: 0.46153846153846156
+Entropia valor: 0.9957274520849256
+
+Entropia Atributo: 0.9957274520849256
+Frecuencia Atributo: 3484.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 616
+Frecuencia de n: 528
+Valor de logp: 0.5384615384615384
+Valor de logn: 0.46153846153846156
+Entropia valor: 0.9957274520849256
+
+Nombre valor: Z Generation
+Frecuencia de p: 588
+Frecuencia de n: 504
+Valor de logp: 0.5384615384615384
+Valor de logn: 0.46153846153846156
+Entropia valor: 0.9957274520849256
+
+Nombre valor: Millenium
+Frecuencia de p: 672
+Frecuencia de n: 576
+Valor de logp: 0.5384615384615384
+Valor de logn: 0.46153846153846156
+Entropia valor: 0.9957274520849256
+
+Entropia Atributo: 0.9957274520849255
+Frecuencia Atributo: 3484.0
+Ganancia calculada: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+
+El atributo con maxima ganancia es: user.birthday Ganancia: 1.1102230246251565E-16
+
+==========================================================
+Valor atributo seleccionado: X Generation
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 616
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 528
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 616.0
+Valor de n: 528.0
+Información: 0.9957274520849256
+*****************************
+Nombre valor: European
+Frecuencia de p: 616
+Frecuencia de n: 528
+Valor de logp: 0.5384615384615384
+Valor de logn: 0.46153846153846156
+Entropia valor: 0.9957274520849256
+
+Entropia Atributo: 0.9957274520849255
+Frecuencia Atributo: 1144.0
+Ganancia calculada: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 1.1102230246251565E-16
+
+==========================================================
+Valor atributo seleccionado: European
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Z Generation
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 588
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 504
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 588.0
+Valor de n: 504.0
+Información: 0.9957274520849256
+*****************************
+Nombre valor: European
+Frecuencia de p: 588
+Frecuencia de n: 504
+Valor de logp: 0.5384615384615384
+Valor de logn: 0.46153846153846156
+Entropia valor: 0.9957274520849256
+
+Entropia Atributo: 0.9957274520849256
+Frecuencia Atributo: 1092.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: European
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Millenium
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 672
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 576
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 672.0
+Valor de n: 576.0
+Información: 0.9957274520849256
+*****************************
+Nombre valor: European
+Frecuencia de p: 672
+Frecuencia de n: 576
+Valor de logp: 0.5384615384615384
+Valor de logn: 0.46153846153846156
+Entropia valor: 0.9957274520849256
+
+Entropia Atributo: 0.9957274520849256
+Frecuencia Atributo: 1248.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: European
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: 80's
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+(Mapa) Nombre Atributo: user.birthday
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: N  Frecuencia: 268
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 268
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 804
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 88
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 352
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 84
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 336
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 96
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 384
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 268.0
+Valor de n: 1072.0
+Información: 0.7219280948873623
+*****************************
+Nombre valor: American
+Frecuencia de p: 0
+Frecuencia de n: 268
+Valor de logp: 0.0
+Valor de logn: 1.0
+Entropia valor: 0.0
+
+Nombre valor: European
+Frecuencia de p: 268
+Frecuencia de n: 804
+Valor de logp: 0.25
+Valor de logn: 0.75
+Entropia valor: 0.8112781244591328
+
+Entropia Atributo: 0.6490224995673063
+Frecuencia Atributo: 1340.0
+Ganancia calculada: 0.07290559532005603
+Ganancia obtenida: 0.07290559532005603
+Ganancia obtenida: 0.07290559532005603
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 88
+Frecuencia de n: 352
+Valor de logp: 0.2
+Valor de logn: 0.8
+Entropia valor: 0.7219280948873623
+
+Nombre valor: Z Generation
+Frecuencia de p: 84
+Frecuencia de n: 336
+Valor de logp: 0.2
+Valor de logn: 0.8
+Entropia valor: 0.7219280948873623
+
+Nombre valor: Millenium
+Frecuencia de p: 96
+Frecuencia de n: 384
+Valor de logp: 0.2
+Valor de logn: 0.8
+Entropia valor: 0.7219280948873623
+
+Entropia Atributo: 0.7219280948873622
+Frecuencia Atributo: 1340.0
+Ganancia calculada: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.07290559532005603
+
+==========================================================
+Valor atributo seleccionado: American
+Es una Hoja
+
+==========================================================
+Valor atributo seleccionado: European
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: user.birthday
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 88
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 264
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 84
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 252
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 96
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 288
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 268.0
+Valor de n: 804.0
+Información: 0.8112781244591328
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 88
+Frecuencia de n: 264
+Valor de logp: 0.25
+Valor de logn: 0.75
+Entropia valor: 0.8112781244591328
+
+Nombre valor: Z Generation
+Frecuencia de p: 84
+Frecuencia de n: 252
+Valor de logp: 0.25
+Valor de logn: 0.75
+Entropia valor: 0.8112781244591328
+
+Nombre valor: Millenium
+Frecuencia de p: 96
+Frecuencia de n: 288
+Valor de logp: 0.25
+Valor de logn: 0.75
+Entropia valor: 0.8112781244591328
+
+Entropia Atributo: 0.8112781244591327
+Frecuencia Atributo: 1072.0
+Ganancia calculada: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+
+El atributo con maxima ganancia es: user.birthday Ganancia: 1.1102230246251565E-16
+
+==========================================================
+Valor atributo seleccionado: X Generation
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Z Generation
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Millenium
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: 60's
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+(Mapa) Nombre Atributo: user.birthday
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: Y  Frecuencia: 804
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 1072
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 1072
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 616
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 352
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 588
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 336
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 672
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 384
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 1876.0
+Valor de n: 1072.0
+Información: 0.9456603046006402
+*****************************
+Nombre valor: American
+Frecuencia de p: 804
+Frecuencia de n: 0
+Valor de logp: 1.0
+Valor de logn: 0.0
+Entropia valor: 0.0
+
+Nombre valor: European
+Frecuencia de p: 1072
+Frecuencia de n: 1072
+Valor de logp: 0.5
+Valor de logn: 0.5
+Entropia valor: 1.0
+
+Entropia Atributo: 0.7272727272727273
+Frecuencia Atributo: 2948.0
+Ganancia calculada: 0.21838757732791292
+Ganancia obtenida: 0.21838757732791292
+Ganancia obtenida: 0.21838757732791292
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 616
+Frecuencia de n: 352
+Valor de logp: 0.6363636363636364
+Valor de logn: 0.36363636363636365
+Entropia valor: 0.9456603046006402
+
+Nombre valor: Z Generation
+Frecuencia de p: 588
+Frecuencia de n: 336
+Valor de logp: 0.6363636363636364
+Valor de logn: 0.36363636363636365
+Entropia valor: 0.9456603046006402
+
+Nombre valor: Millenium
+Frecuencia de p: 672
+Frecuencia de n: 384
+Valor de logp: 0.6363636363636364
+Valor de logn: 0.36363636363636365
+Entropia valor: 0.9456603046006402
+
+Entropia Atributo: 0.9456603046006402
+Frecuencia Atributo: 2948.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.21838757732791292
+
+==========================================================
+Valor atributo seleccionado: American
+Es una Hoja
+
+==========================================================
+Valor atributo seleccionado: European
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: user.birthday
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 352
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 352
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 336
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 336
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 384
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 384
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 1072.0
+Valor de n: 1072.0
+Información: 1.0
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 352
+Frecuencia de n: 352
+Valor de logp: 0.5
+Valor de logn: 0.5
+Entropia valor: 1.0
+
+Nombre valor: Z Generation
+Frecuencia de p: 336
+Frecuencia de n: 336
+Valor de logp: 0.5
+Valor de logn: 0.5
+Entropia valor: 1.0
+
+Nombre valor: Millenium
+Frecuencia de p: 384
+Frecuencia de n: 384
+Valor de logp: 0.5
+Valor de logn: 0.5
+Entropia valor: 1.0
+
+Entropia Atributo: 1.0
+Frecuencia Atributo: 2144.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: user.birthday Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: X Generation
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Z Generation
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Millenium
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Jazz
+Es una Hoja
+
+==========================================================
+Valor atributo seleccionado: Electronic
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+(Mapa) Nombre Atributo: user.birthday
+(Mapa) Nombre Atributo: song.year
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: N  Frecuencia: 536
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 804
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 804
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 264
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 440
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 252
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 420
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 288
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 480
+Atributo: song.year  Valor de Atributo: 90's Valor de Clase: N  Frecuencia: 268
+Atributo: song.year  Valor de Atributo: 00's Valor de Clase: Y  Frecuencia: 804
+Atributo: song.year  Valor de Atributo: 00's Valor de Clase: N  Frecuencia: 268
+Atributo: song.year  Valor de Atributo: 70's Valor de Clase: N  Frecuencia: 536
+Atributo: song.year  Valor de Atributo: 80's Valor de Clase: N  Frecuencia: 268
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 804.0
+Valor de n: 1340.0
+Información: 0.9544340029249649
+*****************************
+Nombre valor: American
+Frecuencia de p: 0
+Frecuencia de n: 536
+Valor de logp: 0.0
+Valor de logn: 1.0
+Entropia valor: 0.0
+
+Nombre valor: European
+Frecuencia de p: 804
+Frecuencia de n: 804
+Valor de logp: 0.5
+Valor de logn: 0.5
+Entropia valor: 1.0
+
+Entropia Atributo: 0.75
+Frecuencia Atributo: 2144.0
+Ganancia calculada: 0.20443400292496494
+Ganancia obtenida: 0.20443400292496494
+Ganancia obtenida: 0.20443400292496494
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 264
+Frecuencia de n: 440
+Valor de logp: 0.375
+Valor de logn: 0.625
+Entropia valor: 0.9544340029249649
+
+Nombre valor: Z Generation
+Frecuencia de p: 252
+Frecuencia de n: 420
+Valor de logp: 0.375
+Valor de logn: 0.625
+Entropia valor: 0.9544340029249649
+
+Nombre valor: Millenium
+Frecuencia de p: 288
+Frecuencia de n: 480
+Valor de logp: 0.375
+Valor de logn: 0.625
+Entropia valor: 0.9544340029249649
+
+Entropia Atributo: 0.9544340029249649
+Frecuencia Atributo: 2144.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+*****************************
+Nombre valor: 90's
+Frecuencia de p: 0
+Frecuencia de n: 268
+Valor de logp: 0.0
+Valor de logn: 1.0
+Entropia valor: 0.0
+
+Nombre valor: 00's
+Frecuencia de p: 804
+Frecuencia de n: 268
+Valor de logp: 0.75
+Valor de logn: 0.25
+Entropia valor: 0.8112781244591328
+
+Nombre valor: 70's
+Frecuencia de p: 0
+Frecuencia de n: 536
+Valor de logp: 0.0
+Valor de logn: 1.0
+Entropia valor: 0.0
+
+Nombre valor: 80's
+Frecuencia de p: 0
+Frecuencia de n: 268
+Valor de logp: 0.0
+Valor de logn: 1.0
+Entropia valor: 0.0
+
+Entropia Atributo: 0.4056390622295664
+Frecuencia Atributo: 2144.0
+Ganancia calculada: 0.5487949406953985
+Ganancia obtenida: 0.5487949406953985
+Ganancia obtenida: 0.5487949406953985
+
+El atributo con maxima ganancia es: song.year Ganancia: 0.5487949406953985
+
+==========================================================
+Valor atributo seleccionado: 90's
+Es una Hoja
+
+==========================================================
+Valor atributo seleccionado: 00's
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+(Mapa) Nombre Atributo: user.birthday
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 804
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 268
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 264
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 88
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 252
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 84
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 288
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 96
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 804.0
+Valor de n: 268.0
+Información: 0.8112781244591328
+*****************************
+Nombre valor: European
+Frecuencia de p: 804
+Frecuencia de n: 268
+Valor de logp: 0.75
+Valor de logn: 0.25
+Entropia valor: 0.8112781244591328
+
+Entropia Atributo: 0.8112781244591328
+Frecuencia Atributo: 1072.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 264
+Frecuencia de n: 88
+Valor de logp: 0.75
+Valor de logn: 0.25
+Entropia valor: 0.8112781244591328
+
+Nombre valor: Z Generation
+Frecuencia de p: 252
+Frecuencia de n: 84
+Valor de logp: 0.75
+Valor de logn: 0.25
+Entropia valor: 0.8112781244591328
+
+Nombre valor: Millenium
+Frecuencia de p: 288
+Frecuencia de n: 96
+Valor de logp: 0.75
+Valor de logn: 0.25
+Entropia valor: 0.8112781244591328
+
+Entropia Atributo: 0.8112781244591327
+Frecuencia Atributo: 1072.0
+Ganancia calculada: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+
+El atributo con maxima ganancia es: user.birthday Ganancia: 1.1102230246251565E-16
+
+==========================================================
+Valor atributo seleccionado: X Generation
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 264
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 88
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 264.0
+Valor de n: 88.0
+Información: 0.8112781244591328
+*****************************
+Nombre valor: European
+Frecuencia de p: 264
+Frecuencia de n: 88
+Valor de logp: 0.75
+Valor de logn: 0.25
+Entropia valor: 0.8112781244591328
+
+Entropia Atributo: 0.8112781244591328
+Frecuencia Atributo: 352.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: European
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Z Generation
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 252
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 84
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 252.0
+Valor de n: 84.0
+Información: 0.8112781244591328
+*****************************
+Nombre valor: European
+Frecuencia de p: 252
+Frecuencia de n: 84
+Valor de logp: 0.75
+Valor de logn: 0.25
+Entropia valor: 0.8112781244591328
+
+Entropia Atributo: 0.8112781244591328
+Frecuencia Atributo: 336.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: European
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Millenium
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 288
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 96
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 288.0
+Valor de n: 96.0
+Información: 0.8112781244591328
+*****************************
+Nombre valor: European
+Frecuencia de p: 288
+Frecuencia de n: 96
+Valor de logp: 0.75
+Valor de logn: 0.25
+Entropia valor: 0.8112781244591328
+
+Entropia Atributo: 0.8112781244591328
+Frecuencia Atributo: 384.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: European
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: 70's
+Es una Hoja
+
+==========================================================
+Valor atributo seleccionado: 80's
+Es una Hoja
+
+==========================================================
+Valor atributo seleccionado: Funk / Soul
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+(Mapa) Nombre Atributo: user.birthday
+(Mapa) Nombre Atributo: song.year
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 1608
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 1508
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 528
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 508
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 504
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 480
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 576
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 520
+Atributo: song.year  Valor de Atributo: 00's Valor de Clase: N  Frecuencia: 168
+Atributo: song.year  Valor de Atributo: 70's Valor de Clase: Y  Frecuencia: 1608
+Atributo: song.year  Valor de Atributo: 70's Valor de Clase: N  Frecuencia: 1340
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 1608.0
+Valor de n: 1508.0
+Información: 0.999256939427246
+*****************************
+Nombre valor: European
+Frecuencia de p: 1608
+Frecuencia de n: 1508
+Valor de logp: 0.5160462130937099
+Valor de logn: 0.4839537869062901
+Entropia valor: 0.999256939427246
+
+Entropia Atributo: 0.999256939427246
+Frecuencia Atributo: 3116.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 528
+Frecuencia de n: 508
+Valor de logp: 0.5096525096525096
+Valor de logn: 0.49034749034749037
+Entropia valor: 0.9997311487854692
+
+Nombre valor: Z Generation
+Frecuencia de p: 504
+Frecuencia de n: 480
+Valor de logp: 0.5121951219512195
+Valor de logn: 0.4878048780487805
+Entropia valor: 0.9995708393473224
+
+Nombre valor: Millenium
+Frecuencia de p: 576
+Frecuencia de n: 520
+Valor de logp: 0.5255474452554745
+Valor de logn: 0.4744525547445255
+Entropia valor: 0.9981159665320884
+
+Entropia Atributo: 0.9991124118673558
+Frecuencia Atributo: 3116.0
+Ganancia calculada: 1.4452755989025068E-4
+Ganancia obtenida: 1.4452755989025068E-4
+Ganancia obtenida: 1.4452755989025068E-4
+*****************************
+Nombre valor: 00's
+Frecuencia de p: 0
+Frecuencia de n: 168
+Valor de logp: 0.0
+Valor de logn: 1.0
+Entropia valor: 0.0
+
+Nombre valor: 70's
+Frecuencia de p: 1608
+Frecuencia de n: 1340
+Valor de logp: 0.5454545454545454
+Valor de logn: 0.45454545454545453
+Entropia valor: 0.9940302114769565
+
+Entropia Atributo: 0.940436798277942
+Frecuencia Atributo: 3116.0
+Ganancia calculada: 0.058820141149304006
+Ganancia obtenida: 0.058820141149304006
+Ganancia obtenida: 0.058820141149304006
+
+El atributo con maxima ganancia es: song.year Ganancia: 0.058820141149304006
+
+==========================================================
+Valor atributo seleccionado: 00's
+Es una Hoja
+
+==========================================================
+Valor atributo seleccionado: 70's
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+(Mapa) Nombre Atributo: user.birthday
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 1608
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 1340
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 528
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 440
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 504
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 420
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 576
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 480
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 1608.0
+Valor de n: 1340.0
+Información: 0.9940302114769565
+*****************************
+Nombre valor: European
+Frecuencia de p: 1608
+Frecuencia de n: 1340
+Valor de logp: 0.5454545454545454
+Valor de logn: 0.45454545454545453
+Entropia valor: 0.9940302114769565
+
+Entropia Atributo: 0.9940302114769564
+Frecuencia Atributo: 2948.0
+Ganancia calculada: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 528
+Frecuencia de n: 440
+Valor de logp: 0.5454545454545454
+Valor de logn: 0.45454545454545453
+Entropia valor: 0.9940302114769565
+
+Nombre valor: Z Generation
+Frecuencia de p: 504
+Frecuencia de n: 420
+Valor de logp: 0.5454545454545454
+Valor de logn: 0.45454545454545453
+Entropia valor: 0.9940302114769565
+
+Nombre valor: Millenium
+Frecuencia de p: 576
+Frecuencia de n: 480
+Valor de logp: 0.5454545454545454
+Valor de logn: 0.45454545454545453
+Entropia valor: 0.9940302114769565
+
+Entropia Atributo: 0.9940302114769564
+Frecuencia Atributo: 2948.0
+Ganancia calculada: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+
+El atributo con maxima ganancia es: user.birthday Ganancia: 1.1102230246251565E-16
+
+==========================================================
+Valor atributo seleccionado: X Generation
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 528
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 440
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 528.0
+Valor de n: 440.0
+Información: 0.9940302114769565
+*****************************
+Nombre valor: European
+Frecuencia de p: 528
+Frecuencia de n: 440
+Valor de logp: 0.5454545454545454
+Valor de logn: 0.45454545454545453
+Entropia valor: 0.9940302114769565
+
+Entropia Atributo: 0.9940302114769565
+Frecuencia Atributo: 968.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: European
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Z Generation
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 504
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 420
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 504.0
+Valor de n: 420.0
+Información: 0.9940302114769565
+*****************************
+Nombre valor: European
+Frecuencia de p: 504
+Frecuencia de n: 420
+Valor de logp: 0.5454545454545454
+Valor de logn: 0.45454545454545453
+Entropia valor: 0.9940302114769565
+
+Entropia Atributo: 0.9940302114769565
+Frecuencia Atributo: 924.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: European
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Millenium
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: Y  Frecuencia: 576
+Atributo: artist.idregion  Valor de Atributo: European Valor de Clase: N  Frecuencia: 480
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 576.0
+Valor de n: 480.0
+Información: 0.9940302114769565
+*****************************
+Nombre valor: European
+Frecuencia de p: 576
+Frecuencia de n: 480
+Valor de logp: 0.5454545454545454
+Valor de logn: 0.45454545454545453
+Entropia valor: 0.9940302114769565
+
+Entropia Atributo: 0.9940302114769565
+Frecuencia Atributo: 1056.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: European
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Hip Hop
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+(Mapa) Nombre Atributo: user.birthday
+(Mapa) Nombre Atributo: song.year
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: Y  Frecuencia: 1072
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: N  Frecuencia: 1608
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 352
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 528
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 336
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 504
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 384
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 576
+Atributo: song.year  Valor de Atributo: 90's Valor de Clase: Y  Frecuencia: 1072
+Atributo: song.year  Valor de Atributo: 90's Valor de Clase: N  Frecuencia: 1608
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 1072.0
+Valor de n: 1608.0
+Información: 0.9709505944546686
+*****************************
+Nombre valor: American
+Frecuencia de p: 1072
+Frecuencia de n: 1608
+Valor de logp: 0.4
+Valor de logn: 0.6
+Entropia valor: 0.9709505944546686
+
+Entropia Atributo: 0.9709505944546685
+Frecuencia Atributo: 2680.0
+Ganancia calculada: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 352
+Frecuencia de n: 528
+Valor de logp: 0.4
+Valor de logn: 0.6
+Entropia valor: 0.9709505944546686
+
+Nombre valor: Z Generation
+Frecuencia de p: 336
+Frecuencia de n: 504
+Valor de logp: 0.4
+Valor de logn: 0.6
+Entropia valor: 0.9709505944546686
+
+Nombre valor: Millenium
+Frecuencia de p: 384
+Frecuencia de n: 576
+Valor de logp: 0.4
+Valor de logn: 0.6
+Entropia valor: 0.9709505944546686
+
+Entropia Atributo: 0.9709505944546687
+Frecuencia Atributo: 2680.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+*****************************
+Nombre valor: 90's
+Frecuencia de p: 1072
+Frecuencia de n: 1608
+Valor de logp: 0.4
+Valor de logn: 0.6
+Entropia valor: 0.9709505944546686
+
+Entropia Atributo: 0.9709505944546685
+Frecuencia Atributo: 2680.0
+Ganancia calculada: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+
+El atributo con maxima ganancia es: song.year Ganancia: 1.1102230246251565E-16
+
+==========================================================
+Valor atributo seleccionado: 90's
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: artist.idregion
+(Mapa) Nombre Atributo: user.birthday
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: Y  Frecuencia: 1072
+Atributo: artist.idregion  Valor de Atributo: American Valor de Clase: N  Frecuencia: 1608
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 352
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 528
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 336
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 504
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 384
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 576
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 1072.0
+Valor de n: 1608.0
+Información: 0.9709505944546686
+*****************************
+Nombre valor: American
+Frecuencia de p: 1072
+Frecuencia de n: 1608
+Valor de logp: 0.4
+Valor de logn: 0.6
+Entropia valor: 0.9709505944546686
+
+Entropia Atributo: 0.9709505944546685
+Frecuencia Atributo: 2680.0
+Ganancia calculada: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+Ganancia obtenida: 1.1102230246251565E-16
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 352
+Frecuencia de n: 528
+Valor de logp: 0.4
+Valor de logn: 0.6
+Entropia valor: 0.9709505944546686
+
+Nombre valor: Z Generation
+Frecuencia de p: 336
+Frecuencia de n: 504
+Valor de logp: 0.4
+Valor de logn: 0.6
+Entropia valor: 0.9709505944546686
+
+Nombre valor: Millenium
+Frecuencia de p: 384
+Frecuencia de n: 576
+Valor de logp: 0.4
+Valor de logn: 0.6
+Entropia valor: 0.9709505944546686
+
+Entropia Atributo: 0.9709505944546687
+Frecuencia Atributo: 2680.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: artist.idregion Ganancia: 1.1102230246251565E-16
+
+==========================================================
+Valor atributo seleccionado: American
+Requiere de mas divisiones
+(Mapa) Nombre Atributo: user.birthday
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: Y  Frecuencia: 352
+Atributo: user.birthday  Valor de Atributo: X Generation Valor de Clase: N  Frecuencia: 528
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: Y  Frecuencia: 336
+Atributo: user.birthday  Valor de Atributo: Z Generation Valor de Clase: N  Frecuencia: 504
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: Y  Frecuencia: 384
+Atributo: user.birthday  Valor de Atributo: Millenium Valor de Clase: N  Frecuencia: 576
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+Valor de p: 1072.0
+Valor de n: 1608.0
+Información: 0.9709505944546686
+*****************************
+Nombre valor: X Generation
+Frecuencia de p: 352
+Frecuencia de n: 528
+Valor de logp: 0.4
+Valor de logn: 0.6
+Entropia valor: 0.9709505944546686
+
+Nombre valor: Z Generation
+Frecuencia de p: 336
+Frecuencia de n: 504
+Valor de logp: 0.4
+Valor de logn: 0.6
+Entropia valor: 0.9709505944546686
+
+Nombre valor: Millenium
+Frecuencia de p: 384
+Frecuencia de n: 576
+Valor de logp: 0.4
+Valor de logn: 0.6
+Entropia valor: 0.9709505944546686
+
+Entropia Atributo: 0.9709505944546687
+Frecuencia Atributo: 2680.0
+Ganancia calculada: 0.0
+Ganancia obtenida: 0.0
+Ganancia obtenida: 0.0
+
+El atributo con maxima ganancia es: user.birthday Ganancia: 0.0
+
+==========================================================
+Valor atributo seleccionado: X Generation
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Z Generation
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+==========================================================
+Valor atributo seleccionado: Millenium
+Requiere de mas divisiones
+==============================================================
+
+***Prueba de frecuencias por atributo-valor***
+
+***Fin de prueba de frecuencias por atributo-valor***
+Clase valor: Y
+Clase valor: N
+
+
+***** ARBOL DE DECISION (ID3) ****
+
+
+└── genre.name
+    ├── Pop
+    │   └── song.year
+    │       └── 80's
+    │           └── user.birthday
+    │               ├── X Generation
+    │               │   └── artist.idregion
+    │               │       └── American
+    │               │           └── Y
+    │               ├── Z Generation
+    │               │   └── artist.idregion
+    │               │       └── American
+    │               │           └── Y
+    │               └── Millenium
+    │                   └── artist.idregion
+    │                       └── American
+    │                           └── Y
+    ├── Rock
+    │   └── song.year
+    │       ├── 90's
+    │       │   └── user.birthday
+    │       │       ├── X Generation
+    │       │       │   └── artist.idregion
+    │       │       │       └── European
+    │       │       │           └── Y
+    │       │       ├── Z Generation
+    │       │       │   └── artist.idregion
+    │       │       │       └── European
+    │       │       │           └── Y
+    │       │       └── Millenium
+    │       │           └── artist.idregion
+    │       │               └── European
+    │       │                   └── Y
+    │       ├── 70's
+    │       │   └── user.birthday
+    │       │       ├── X Generation
+    │       │       │   └── artist.idregion
+    │       │       │       └── European
+    │       │       │           └── Y
+    │       │       ├── Z Generation
+    │       │       │   └── artist.idregion
+    │       │       │       └── European
+    │       │       │           └── Y
+    │       │       └── Millenium
+    │       │           └── artist.idregion
+    │       │               └── European
+    │       │                   └── Y
+    │       ├── 80's
+    │       │   └── artist.idregion
+    │       │       ├── American
+    │       │       │   └── N
+    │       │       └── European
+    │       │           └── user.birthday
+    │       │               ├── X Generation
+    │       │               │   └── N
+    │       │               ├── Z Generation
+    │       │               │   └── N
+    │       │               └── Millenium
+    │       │                   └── N
+    │       └── 60's
+    │           └── artist.idregion
+    │               ├── American
+    │               │   └── Y
+    │               └── European
+    │                   └── user.birthday
+    │                       ├── X Generation
+    │                       │   └── Y
+    │                       ├── Z Generation
+    │                       │   └── Y
+    │                       └── Millenium
+    │                           └── Y
+    ├── Jazz
+    │   └── Y
+    ├── Electronic
+    │   └── song.year
+    │       ├── 90's
+    │       │   └── N
+    │       ├── 00's
+    │       │   └── user.birthday
+    │       │       ├── X Generation
+    │       │       │   └── artist.idregion
+    │       │       │       └── European
+    │       │       │           └── Y
+    │       │       ├── Z Generation
+    │       │       │   └── artist.idregion
+    │       │       │       └── European
+    │       │       │           └── Y
+    │       │       └── Millenium
+    │       │           └── artist.idregion
+    │       │               └── European
+    │       │                   └── Y
+    │       ├── 70's
+    │       │   └── N
+    │       └── 80's
+    │           └── N
+    ├── Funk / Soul
+    │   └── song.year
+    │       ├── 00's
+    │       │   └── N
+    │       └── 70's
+    │           └── user.birthday
+    │               ├── X Generation
+    │               │   └── artist.idregion
+    │               │       └── European
+    │               │           └── Y
+    │               ├── Z Generation
+    │               │   └── artist.idregion
+    │               │       └── European
+    │               │           └── Y
+    │               └── Millenium
+    │                   └── artist.idregion
+    │                       └── European
+    │                           └── Y
+    └── Hip Hop
+        └── song.year
+            └── 90's
+                └── artist.idregion
+                    └── American
+                        └── user.birthday
+                            ├── X Generation
+                            │   └── N
+                            ├── Z Generation
+                            │   └── N
+                            └── Millenium
+                                └── N

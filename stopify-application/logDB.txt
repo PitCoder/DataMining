@@ -1,0 +1,113 @@
+Getting Connection to database...
+connection to general DB sucessful
+Getting Connection to database...
+connection to my DB sucessful
+
+==============================================================
+QUERY: 
+
+DROP TABLE IF EXISTS `multidimensionalDB`.`song`;
+
+CREATE TABLE IF NOT EXISTS `multidimensionalDB`.`song` (
+`songname` VARCHAR(100) NOT NULL,
+`idsong` INTEGER,
+PRIMARY KEY (`songname`))
+ENGINE = InnoDB;
+0
+0
+
+==============================================================
+QUERY: 
+
+INSERT INTO multidimensionalDB.song (song.songname,song.idsong)
+SELECT DISTINCT song.songname,song.idsong
+FROM spotify.song;
+243
+
+==============================================================
+QUERY: 
+
+DROP TABLE IF EXISTS `multidimensionalDB`.`genre`;
+
+CREATE TABLE IF NOT EXISTS `multidimensionalDB`.`genre` (
+`idgenre` INTEGER NOT NULL,
+`name` VARCHAR(100),
+PRIMARY KEY (`idgenre`))
+ENGINE = InnoDB;
+0
+0
+
+==============================================================
+QUERY: 
+
+INSERT INTO multidimensionalDB.genre (genre.idgenre,genre.name)
+SELECT DISTINCT genre.idgenre,genre.name
+FROM spotify.genre;
+15
+
+==============================================================
+QUERY: 
+
+DROP TABLE IF EXISTS `multidimensionalDB`.`time`;
+
+CREATE TABLE IF NOT EXISTS `multidimensionalDB`.`time` (
+`birthday` DATE NOT NULL,
+PRIMARY KEY (`birthday`))
+ENGINE = InnoDB;
+0
+0
+
+==============================================================
+QUERY: 
+
+INSERT INTO multidimensionalDB.time (time.birthday)
+SELECT DISTINCT user.birthday
+FROM spotify.user;
+975
+
+==============================================================
+QUERY: 
+
+DROP TABLE IF EXISTS `multidimensionalDB`.`factTable`;
+
+CREATE TABLE IF NOT EXISTS `multidimensionalDB`.`factTable` (
+`songname` VARCHAR(100) NOT NULL,
+`idgenre` INTEGER NOT NULL,
+`birthday` DATE NOT NULL,
+`hit` CHAR(1),
+`plays` INTEGER NOT NULL,
+PRIMARY KEY (`songname`,`idgenre`,`birthday`),
+CONSTRAINT `fk_factTable_songname`
+FOREIGN KEY (`songname`)
+REFERENCES `multidimensionalDB`.`song` (`songname`)
+ON DELETE CASCADE
+ON UPDATE CASCADE,
+CONSTRAINT `fk_factTable_idgenre`
+FOREIGN KEY (`idgenre`)
+REFERENCES `multidimensionalDB`.`genre` (`idgenre`)
+ON DELETE CASCADE
+ON UPDATE CASCADE,
+CONSTRAINT `fk_factTable_birthday`
+FOREIGN KEY (`birthday`)
+REFERENCES `multidimensionalDB`.`time` (`birthday`)
+ON DELETE CASCADE
+ON UPDATE CASCADE)
+ENGINE = InnoDB;
+0
+0
+
+==============================================================
+QUERY: 
+
+INSERT INTO multidimensionalDB.factTable (factTable.songname,factTable.idgenre,factTable.birthday,factTable.hit,factTable.plays)
+SELECT song.songname,genre.idgenre,user.birthday,song.hit,song.plays
+FROM spotify.user, spotify.playlist_has_followers, spotify.playlist, spotify.playlist_has_songs, spotify.song, spotify.genre, spotify.region, spotify.artist
+WHERE region.idregion = user.idregion
+AND user.email = playlist_has_followers.email
+AND playlist_has_followers.idplaylist = playlist.idplaylist
+AND playlist.idplaylist = playlist_has_songs.idplaylist
+AND playlist_has_songs.idsong = song.idsong
+AND song.idgenre = genre.idgenre
+AND song.idartist = artist.idartist
+LIMIT 5000;
+5000

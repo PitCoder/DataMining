@@ -1,0 +1,8 @@
+127.0.0.1 - - [12/Mar/2019:23:14:47 -0600] "GET / HTTP/1.1" 200 1492 http-bio-8080-exec-1 2298
+127.0.0.1 - - [12/Mar/2019:23:14:48 -0600] "GET /stylesheets/global.css HTTP/1.1" 200 342 http-bio-8080-exec-5 13
+127.0.0.1 - - [12/Mar/2019:23:14:48 -0600] "GET /webjars/bootstrap/4.1.1/dist/css/bootstrap.min.css HTTP/1.1" 200 140930 http-bio-8080-exec-2 79
+127.0.0.1 - - [12/Mar/2019:23:14:48 -0600] "GET /webjars/bootstrap/4.1.1/dist/js/bootstrap.min.js HTTP/1.1" 200 50731 http-bio-8080-exec-4 64
+127.0.0.1 - - [12/Mar/2019:23:14:48 -0600] "GET /webjars/popper.js/1.14.3/dist/umd/popper.min.js HTTP/1.1" 200 20337 http-bio-8080-exec-6 55
+127.0.0.1 - - [12/Mar/2019:23:14:48 -0600] "GET /webjars/jquery/3.1.1/jquery.min.js HTTP/1.1" 200 86744 http-bio-8080-exec-3 80
+127.0.0.1 - - [12/Mar/2019:23:14:48 -0600] "GET /images/spotifyLogin.jpg HTTP/1.1" 200 725751 http-bio-8080-exec-1 14
+127.0.0.1 - - [12/Mar/2019:23:15:03 -0600] "POST /login.do HTTP/1.1" 200 1492 http-bio-8080-exec-5 711
