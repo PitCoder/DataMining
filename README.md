@@ -10,8 +10,9 @@
 
 ### Data Mining usign fundamentals of Machine Learning with decision trees
 
-[![An Introduction to Machine Learning With Decision Trees](https://ramandeep2017.files.wordpress.com/2017/08/02705-1cjv-yipk8pejnitg2vxava.png?w=640)]()
-
+<p align="center">
+  <img src="https://ramandeep2017.files.wordpress.com/2017/08/02705-1cjv-yipk8pejnitg2vxava.png?w=640" alt="An Introduction to Machine Learning With Decision Trees"/>
+</p>
 
 ### ID3 Algorithm Overview
 ID3 stands for Iterative Dichotomizer 3. The ID3 algorithm was invented by Ross Quinlan. It builds a decision tree from a fixed set of examples and the resulting tree is used to classify future samples.
