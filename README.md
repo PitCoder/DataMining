@@ -38,31 +38,31 @@ The project codebase is contained within the folder "stopify-application", the c
 > The entity relation diagram describes how was made the database's structure, defining entities and their relations.
 
 <p align="center">
-  <img src="https://annalyzin.files.wordpress.com/2016/07/decision-tree-tutorial-animated3.gif?w=636&h=312&crop=1" alt="ID3 Algorithm GIF"/> 
+  <img src="https://github.com/PitCoder/DataMining/blob/master/Img/database_model.png" alt="Entity Relation Diagram"/> 
 </p>
 
 #### Table Index and Data Selection
 
 <p align="center">
-  <img src="https://annalyzin.files.wordpress.com/2016/07/decision-tree-tutorial-animated3.gif?w=636&h=312&crop=1" alt="ID3 Algorithm GIF"/>
+  <img src="https://github.com/PitCoder/DataMining/blob/master/Img/data_selection.png" alt="Data Selection"/>
 </p>
 
 #### Parameters and Functions Setup
 
 <p align="center">
-  <img src="https://annalyzin.files.wordpress.com/2016/07/decision-tree-tutorial-animated3.gif?w=636&h=312&crop=1" alt="ID3 Algorithm GIF"/>
+  <img src="https://github.com/PitCoder/DataMining/blob/master/Img/param_config.png" alt="Parameters and Functions Setup"/>
 </p>
 
 #### Decision Tree Generation
 
 <p align="center">
-  <img src="https://annalyzin.files.wordpress.com/2016/07/decision-tree-tutorial-animated3.gif?w=636&h=312&crop=1" alt="ID3 Algorithm GIF"/>
+  <img src="https://github.com/PitCoder/DataMining/blob/master/Img/tree_gen.png" alt="Tree Generation"/>
 </p>
 
 #### Detailed Report Generation
 
 <p align="center">
-  <img src="https://annalyzin.files.wordpress.com/2016/07/decision-tree-tutorial-animated3.gif?w=636&h=312&crop=1" alt="ID3 Algorithm GIF"/>
+  <img src="https://github.com/PitCoder/DataMining/blob/master/Img/report.png" alt="Report Generation"/>
 </p>
 
 #### Demonstration of how internally ID3 algorithm operates
