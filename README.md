@@ -29,9 +29,41 @@ A decision tree is a type of supervised learning algorithm (with a predefined ta
 As the main project of the course the algorithm is applied to data stored in a database of a music streaming application named (Stopify). This with the purpose of obtaining a better visualization of the overall information structure and to generate very basic business knowledge for decision taking by mining and processing the raw data.
 
 ### Project Codebase
-The project codebase is contained within the folder "spotify-application", the codebase include both backend and frontend developent, for more information please feel free to take a look at it!.
+The project codebase is contained within the folder "stopify-application", the codebase include both backend and frontend development, for more information please feel free to take a look at it!.
 
 ### Project Screenshots and Demo
+
+#### Entity-Relation Diagram of Stopify Database
+
+> The entity relation diagram describes how was made the database's structure, defining entities and their relations.
+
+<p align="center">
+  <img src="https://annalyzin.files.wordpress.com/2016/07/decision-tree-tutorial-animated3.gif?w=636&h=312&crop=1" alt="ID3 Algorithm GIF"/> 
+</p>
+
+#### Table Index and Data Selection
+
+<p align="center">
+  <img src="https://annalyzin.files.wordpress.com/2016/07/decision-tree-tutorial-animated3.gif?w=636&h=312&crop=1" alt="ID3 Algorithm GIF"/>
+</p>
+
+#### Parameters and Functions Setup
+
+<p align="center">
+  <img src="https://annalyzin.files.wordpress.com/2016/07/decision-tree-tutorial-animated3.gif?w=636&h=312&crop=1" alt="ID3 Algorithm GIF"/>
+</p>
+
+#### Decision Tree Generation
+
+<p align="center">
+  <img src="https://annalyzin.files.wordpress.com/2016/07/decision-tree-tutorial-animated3.gif?w=636&h=312&crop=1" alt="ID3 Algorithm GIF"/>
+</p>
+
+#### Detailed Report Generation
+
+<p align="center">
+  <img src="https://annalyzin.files.wordpress.com/2016/07/decision-tree-tutorial-animated3.gif?w=636&h=312&crop=1" alt="ID3 Algorithm GIF"/>
+</p>
 
 #### Demonstration of how internally ID3 algorithm operates
 
