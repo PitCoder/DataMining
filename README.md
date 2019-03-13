@@ -43,11 +43,17 @@ The project codebase is contained within the folder "stopify-application", the c
 
 #### Table Index and Data Selection
 
+
+> The table index shows the current selected table from the database and its attributes, here the user selects the attributes to which analysis will be apply.
+
 <p align="center">
   <img src="https://github.com/PitCoder/DataMining/blob/master/Img/data_selection.png" alt="Data Selection"/>
 </p>
 
 #### Parameters and Functions Setup
+
+> Here parameters and functions are set, establishing the criteria that define how the decision tree will be made.
+
 
 <p align="center">
   <img src="https://github.com/PitCoder/DataMining/blob/master/Img/param_config.png" alt="Parameters and Functions Setup"/>
@@ -55,11 +61,15 @@ The project codebase is contained within the folder "stopify-application", the c
 
 #### Decision Tree Generation
 
+> Once the setup has been defined its corresponding decision tree will be generated. The information display within the tree provide helpful information of the data selected.
+
 <p align="center">
   <img src="https://github.com/PitCoder/DataMining/blob/master/Img/tree_gen.png" alt="Tree Generation"/>
 </p>
 
 #### Detailed Report Generation
+
+> Finally, the user has the option to generate a more detailed report of the ID3 generation process, all generated data during ID3 creation will be send from the server and it will be displayed in the client's size on a log.
 
 <p align="center">
   <img src="https://github.com/PitCoder/DataMining/blob/master/Img/report.png" alt="Report Generation"/>
@@ -76,5 +86,5 @@ The project codebase is contained within the folder "stopify-application", the c
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
-- Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
+- Copyright 2018 © <a href="https://github.com/PitCoder" target="_blank">Eric Alejandro López Ayala</a>.
 
